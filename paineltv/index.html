@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/relogio.css" /> 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>
         <script src="js/html5shiv.js"></script>
@@ -37,9 +38,9 @@
         
         <!-- theme -->
 
-       <div class="container-fluid h-100">
+       <div class="" style="height: 100%;">
            <div id="layout" class="{{ ultima.styleClass }}">
-               <div ng-include="'themes/' + config.theme + '/tvaovivo.html'" onload="themeResources()"></div>
+               <div ng-include="'themes/' + config.theme + '/tvaovivo.html'" onload="themeResources()" style="height: 100%;"></div>
            </div>
        </div> 
 
@@ -181,5 +182,6 @@
         <script type="text/javascript" src="js/buzz.js"></script>
         <script type="text/javascript" src="js/painel.js"></script>
         <script type="text/javascript" src="js/painel-web.js"></script>
+        
     </body>
 </html>

@@ -1,0 +1,14 @@
+.time {
+  color: #ddd;
+  text-shadow: 0 1px 5px black;
+  margin-top: 10%;
+  font-size: 20px;
+}
+
+.hour {
+  font-size: 80px;
+}
+
+.date {
+  font-size: 25px;
+}

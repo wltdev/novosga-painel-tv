@@ -1,12 +1,12 @@
-<div class="content" style="height: inherit;">
-	<div class="row" style="height: inherit;">
-		<div class="col-md-7 h-100">		
+<div>
+	<div class="row">
+		<div class="col-md-7" style="background-color: black;">		
 			<div class="row">
-				<div class="col-lg">				
+				<div class="col">				
 					<iframe 
-						src="https://www.youtube.com/embed?listType=playlist&list=PLe0X3CxixrCVtm4s7efNftwiu1PJiMVXL&hl=pt&cc_lang_pref=pt&cc_load_policy=0&fs=0&mute=1&controls=0&autoplay=1&loop=1" 
+						src="https://www.youtube.com/embed/videoseries?list=PLgFPSBWI2ATsSylWergrX76P05BvPqvj5" 
 						width="100%"
-						height="550" 
+						height="605" 
 						frameborder="0" 
 						allow="accelerometer; 
 						autoplay; encrypted-media; 
@@ -15,19 +15,25 @@
 					</iframe>
 				</div>
 			</div>
-	
 			<div class="row">
-				<div class="col-lg">
+				<div id="hora" class="col">
+					<div id="relogio-container">
+						<iframe id="relogio" src="themes/tvaovivo/relogio.html" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="row">
+				<div class="col">
 					<div class="noticias">
 						<h1>Noticias</h1>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	
 		<div class="col-md-5" >
-			<div class="row">			
-				<div class="senha-container"> 
+			<div class="row" style="height: 603px;">			
+				<div class="senha-container col"> 
 					<div id="mensagem">
 						<span>{{ ultima.mensagem }}</span>
 					</div>
@@ -46,21 +52,25 @@
 				</div>					
 			</div>
 
+			<h2 style="text-align: center;">Senha anteriores</h2>
+			<hr />
+
 			<div class="row">
-				<h4>historico</h4>
-				<div id="historico">
+				<div id="historico" class="col">
 					<div class="senhas">
 						<div class="col-md-6 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
 							<div class="senha">
 								<span>{{ senha.texto }}</span>
 							</div>
-							<div class="local">
-								<span>{{ senha.local }}: {{ senha.numeroLocal }}</span>
+							<div>
+								<span class="local">{{ senha.local }}: {{ senha.numeroLocal }}</span>
 							</div>
-						</div>
+						</div>	
 					</div>
 				</div>
 			</div>
+
+			
 
 	</div>
 

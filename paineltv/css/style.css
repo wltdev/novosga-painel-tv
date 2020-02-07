@@ -93,3 +93,7 @@ html, body {
 .row .content .ng-scope {
 	height: inherit;
 }
+
+.ng-scope {
+    height: 100%;
+}

@@ -27,12 +27,10 @@
   height: 15vh;
 }
 
-#relogio-container {
-	left: 15%;  /* p/ ficar centralizada TODO: fazer um método melhor */
-	width: 480px;
-	height: 110px;
-	margin-left: auto;
-	margin-right: auto;
+#relogio-container {	
+	width: 100%;
+	height: 200%;
+	margin-left: 36px;
 	overflow: hidden;
 }
 
@@ -105,12 +103,17 @@
 }
 
 #historico .senhas {
-    overflow: hidden;
+		overflow: hidden;
+		padding: 0 35px;
 }
 
 #historico .senhas div.senha-chamada {
     text-align: center;
-    display: inline-block;
+		display: inline-block;
+		border-bottom: 1px solid;
+    border-color: slategray;
+    /* border-block-end-width: unset; */
+    border-bottom-style: dotted;
 }
 
 #historico .senhas div.senha-chamada div.senha { 
@@ -125,22 +128,46 @@
 
 /* cores - atendimento normal */
 /* #layout.normal { background-color: #0055a3; } */
-#layout.normal { background-color: #2d10dca6; }
-#layout.normal #mensagem span { color: #fff; }
-#layout.normal #senha span { color: #eeff00; }
-#layout.normal #local span { color: #fff; }
-#layout.normal #local-numero span { color: #fff; }
-#layout.normal #historico .senhas { background: rgba(0, 0, 0, .4); }
-#layout.normal #historico .senhas * { color: #fff; }
+#layout.normal { 
+	background-image: url('/background.jpg'), linear-gradient(rgba(88, 107, 216, 0.5),rgba(7, 29, 102, 0.5)) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#layout.normal #mensagem span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.normal #senha span { color: #225a48; text-shadow: 0px 1px #fdfd; }
+#layout.normal #local span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.normal #local-numero span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+/* #layout.normal #historico .senhas { background: rgba(0, 0, 0, .4); } */
+#historico .senhas .normal * { color: #225a48 !important; text-shadow: 0px 1px #fdfd; }
+#historico .senhas .normal .local {
+	font-size: 25px !important;
+	color: #423c3c !important;
+	text-shadow: 0px 1px #fdfd;
+}
+
 
 /* cores - atendimento prioritario */
-#layout.prioridade { background-color: #fff; }
-#layout.prioridade #senha-container span { color: #d2322d; }
-#layout.prioridade #historico .senhas { background-color: #f1f1f1; }
-#layout.prioridade #historico .senhas * { color: #333; }
+#layout.prioridade { 
+	background-image: url(https://cdn.shortpixel.ai/spai3/w_953+q_lossy+ret_img+ex_1+to_webp/https://lumenis.com/wp-content/uploads/2019/09/New-Homepage-Medical-Cover.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+ }
+
+#layout.prioridade #senha span { color: #ff5722; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #local span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #local-numero span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #mensagem span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+/* #layout.prioridade #senha-container span { color: #d2322d; } */
+/* #layout.prioridade #historico .senhas { background-color: #f1f1f1; } */
+#layout.prioridade #historico .senhas * { color: #fff; text-shadow: 0px 1px #fdfd; }
 
 /* cores - atendimento prioritario quando no historico */
-#historico .senhas .prioridade * { color: #d2322d !important; }
+#historico .senhas .prioridade * { color: #ff5722 !important; text-shadow: 0px 1px #fdfd; }
+#historico .senhas .prioridade .local {
+	font-size: 25px !important;
+	color: #423c3c !important;
+	text-shadow: 0px 1px #fdfd;
+}
 
 /* fonts */
 
@@ -217,7 +244,7 @@
 	border: 1px solid black;
 	background-color: #162944;
 	color: red;
-	min-height: 24vh;
+	min-height: 38vh;
 	width: 100%;
 }
 
@@ -235,4 +262,15 @@
 
 p {
 	margin-bottom: 0 !important;
+}
+
+hr {
+  border:none;
+  height: 20px;
+ 	width: 90%;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #1f1209;
+	box-shadow: 0 29px 39px -12px #333;
+  margin: -50px auto 10px; 
 }
