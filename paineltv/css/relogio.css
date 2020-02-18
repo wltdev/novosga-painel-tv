@@ -2,13 +2,13 @@
   color: #ddd;
   text-shadow: 0 1px 5px black;
   margin-top: 10%;
-  font-size: 20px;
+  font-size: 10px;
 }
 
 .hour {
-  font-size: 80px;
+  font-size: 15px;
 }
 
 .date {
-  font-size: 25px;
+  font-size: 10px;
 }

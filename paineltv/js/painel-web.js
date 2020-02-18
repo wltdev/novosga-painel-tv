@@ -101,6 +101,7 @@ angular.module('app', [])
             PainelWeb.trigger('save');
         };
         
+        // Alterar essa função para sobrescrever video por 10 seg
         $scope.chamar = function() {
             if (PainelWeb.started && $scope.senhas.length > 0) {
                 var senha = $scope.senhas.shift();
