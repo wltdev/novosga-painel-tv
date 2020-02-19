@@ -97,3 +97,7 @@ html, body {
 .ng-scope {
     height: 100%;
 }
+
+footer {
+    border-top: #000 2px solid;
+}
