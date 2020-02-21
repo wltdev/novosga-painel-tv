@@ -3,10 +3,15 @@
  */
 
 /* Links */
-a,
-a:focus,
+a {
+  margin-right: 15px;
+}
 a:hover {
-  color: #fff;
+  color: rgb(166, 224, 247);
+}
+
+label {
+  color: #929090;
 }
 
 /* Custom default button */

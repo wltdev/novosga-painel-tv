@@ -3,19 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+    <title data-i18n="PainelWeb.title">Painel TV</title>
 
-    <title>Painel TV</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">,
-    <link rel="stylesheet" type="text/css" href="css/relogio.css" /> 
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/cover.css" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
-    <!-- Custom styles for this template -->
-    <link href="./assets/css/cover.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/relogio.css" /> 
     <link rel="stylesheet" type="text/css" href="css/style.css" /> 
+
     <script type="text/javascript" src="js/angular.min.js"></script>
   </head>
 
@@ -43,12 +38,16 @@
     <div class="container d-flex h-100 mx-auto flex-column full-container">
         <header class="masthead mb-auto">
             <div class="inner">
-            <div class="masthead-brand">
-                <img src="./assets/img/logo.png" width="100" class="img-responsive" />
-            </div>
-            <nav class="nav nav-masthead justify-content-center">
-                <!-- <div class='time' id='time'></div> -->
-            </nav>
+                <div class="masthead-brand">
+                    <img src="./assets/img/logo.png" width="100" class="img-responsive" />
+                </div>
+                <nav class="nav nav-masthead justify-content-center">
+                    <div class="shape">
+                        <div class="hour-content">                            
+                            <div> Hour here </div>
+                        </div>
+                    </div>
+                </nav>
             </div>
         </header>
 
@@ -60,22 +59,16 @@
 
         
         <footer class="mastfoot mt-auto footer">
-            <div class="row">
-                <div class="col-md-3 senha-chamada {{ senha.styleClass }}">
-                    <h1>senha 1</h1>
-                    <h6>Guichê: 1</h6>
-                </div>	
-                <div class="col-md-3 senha-chamada {{ senha.styleClass }}">
-                    <h1>senha 1</h1>
-                    <h6>Guichê: 1</h6>
-                </div>
-                <div class="col-md-3 senha-chamada {{ senha.styleClass }}">
-                    <h1>senha 1</h1>
-                    <h6>Guichê: 1</h6>
-                </div>
-                <div class="col-md-3 senha-chamada {{ senha.styleClass }}">
-                    <h1>senha 1</h1>
-                    <h6>Guichê: 1</h6>
+            <div id="historico" class="row">
+                <div class="senhas">
+                    <div class="col-md-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                        <div class="senha">
+                            <span>{{ senha.texto }}</span>
+                        </div>
+                        <div>
+                            <span class="local">{{ senha.local }}: {{ senha.numeroLocal }}</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </footer>
@@ -207,14 +200,11 @@
         </div>
     </div>
 
+    <audio id="alert"></audio>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="./assets/js/jquery-slim.min.js"><\/script>')</script>
-
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/i18next.min.js"></script>
     <script type="text/javascript" src="js/buzz.js"></script>
     <script type="text/javascript" src="js/painel.js"></script>

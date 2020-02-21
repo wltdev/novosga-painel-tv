@@ -1,9 +1,21 @@
 <main role="main" class="inner cover">
-    <h1 class="cover-heading">Cover your page.</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-    <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-    </p>
+    <div class="senha-container col"> 
+        <div id="mensagem">
+            <span>{{ ultima.mensagem }}</span>
+        </div>
+        <div id="senha" class="blink">
+            <span>{{ ultima.texto }}</span>
+        </div>
+        
+        <div id="local-div">
+            <div id="local" class="local">
+                <span>{{ ultima.local }}</span>
+            </div>
+            <div id="local-numero" class="numero-local">
+                <span>{{ ultima.numeroLocal }}</span>
+            </div>
+        </div>
+    </div>
 </main>
 
 <!-- <footer class="mastfoot mt-auto">
