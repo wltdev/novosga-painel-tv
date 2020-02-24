@@ -65,7 +65,7 @@
  * Senha Atual - Ultima senha chamada
  */
 #mensagem {    
-		text-align: center;
+	/* text-align: center; */
 }
 
 #mensagem span {
@@ -79,18 +79,17 @@
 
 /* local */
 
-#local {
-}
-
 #local-numero {    
 	font-weight: bold;
+	margin-top: -80px;
 }
 
 #local-div {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: -50px;
+	flex-direction: column;
+	margin-top: 30%;
 }
 
 /*
@@ -103,22 +102,21 @@
 }
 
 #historico .senhas {
-		overflow: hidden;
-		padding: 0 35px;
+	overflow: hidden;
+	padding: 0 35px;
+	width: 100%;
 }
 
 #historico .senhas div.senha-chamada {
     text-align: center;
-		display: inline-block;
-		border-bottom: 1px solid;
+	display: inline-block;
     border-color: slategray;
-    /* border-block-end-width: unset; */
-    border-bottom-style: dotted;
 }
 
 #historico .senhas div.senha-chamada div.senha { 
     font-weight: bold; 
-    text-align: center; 
+	text-align: center; 
+	margin-bottom: -15px;
 }
 
 #historico .senhas div.senha-chamada div.local {
@@ -133,14 +131,14 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 } */
-#layout.normal #mensagem span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
-#layout.normal #senha span { color: #225a48; text-shadow: 0px 1px #fdfd; }
-#layout.normal #local span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
-#layout.normal #local-numero span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.normal #mensagem span { color: #0045ff; text-shadow: 0px 1px #fdfd; }
+#layout.normal #senha span { color: #07226d; text-shadow: 0px 1px #fdfd; }
+#layout.normal #local span { color: #0045ff; text-shadow: 0px 1px #fdfd; }
+#layout.normal #local-numero span { color: #06226d; text-shadow: 0px 1px #fdfd; font-size: 25vmin; }
 /* #layout.normal #historico .senhas { background: rgba(0, 0, 0, .4); } */
-#historico .senhas .normal * { color: #225a48 !important; text-shadow: 0px 1px #fdfd; }
+#historico .senhas .normal * { color: #07226d !important; text-shadow: 0px 1px #fdfd; }
 #historico .senhas .normal .local {
-	font-size: 25px !important;
+	font-size: 40px !important;
 	color: #423c3c !important;
 	text-shadow: 0px 1px #fdfd;
 }
@@ -153,18 +151,18 @@
 	background-size: cover;
  } */
 
-#layout.prioridade #senha span { color: #ff5722; text-shadow: 0px 1px #fdfd; }
-#layout.prioridade #local span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
-#layout.prioridade #local-numero span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
-#layout.prioridade #mensagem span { color: #7a7b7b; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #senha span { color: #b00000e6; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #local span { color: #0045ff; text-shadow: 0px 1px #fdfd; }
+#layout.prioridade #local-numero span { color: #06226d; text-shadow: 0px 1px #fdfd; font-size: 25vmin; }
+#layout.prioridade #mensagem span { color: #0045ff; text-shadow: 0px 1px #fdfd; }
 /* #layout.prioridade #senha-container span { color: #d2322d; } */
 /* #layout.prioridade #historico .senhas { background-color: #f1f1f1; } */
 #layout.prioridade #historico .senhas * { color: #fff; text-shadow: 0px 1px #fdfd; }
 
 /* cores - atendimento prioritario quando no historico */
-#historico .senhas .prioridade * { color: #ff5722 !important; text-shadow: 0px 1px #fdfd; }
+#historico .senhas .prioridade * { color: #b00000e6 !important; text-shadow: 0px 1px #fdfd; }
 #historico .senhas .prioridade .local {
-	font-size: 25px !important;
+	font-size: 40px !important;
 	color: #423c3c !important;
 	text-shadow: 0px 1px #fdfd;
 }
@@ -172,11 +170,11 @@
 /* fonts */
 
 #mensagem span {
-	font-size: 5vmin;
+	font-size: 10vmin;
 }
 
 #senha span {	
-	font-size: 12vmin;
+	font-size: 30vmin;
 }
 
 #local span {
@@ -192,7 +190,7 @@
 }
 
 .senha-chamada .senha span {
-	font-size: 5vmin;
+	font-size: 70px;
 }
 
 .senha-chamada .local span {	
