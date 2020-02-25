@@ -117,12 +117,20 @@
     font-weight: bold; 
 	text-align: center; 
 	margin-bottom: -15px;
+	margin-top: -23px;
 }
 
 #historico .senhas div.senha-chamada div.local {
     text-align: center;
 }
 
+.historico-senha-atual {
+	color: #07226d !important;
+    padding: 0;
+    margin-top: 10px;
+    /* margin-bottom: -10px; */
+    font-size: 23px;
+}
 
 /* cores - atendimento normal */
 /* #layout.normal { background-color: #0055a3; } */
@@ -160,7 +168,7 @@
 #layout.prioridade #historico .senhas * { color: #fff; text-shadow: 0px 1px #fdfd; }
 
 /* cores - atendimento prioritario quando no historico */
-#historico .senhas .prioridade * { color: #b00000e6 !important; text-shadow: 0px 1px #fdfd; }
+#historico .senhas .prioridade * { color: #b00000e6; text-shadow: 0px 1px #fdfd; }
 #historico .senhas .prioridade .local {
 	font-size: 40px !important;
 	color: #423c3c !important;

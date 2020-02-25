@@ -67,7 +67,20 @@
         <footer class="mastfoot mt-auto footer">
             <div id="historico" class="row">
                 <div class="senhas">
-                    <div class="col-md-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+                    <div class="col-md-2 senha-chamada {{ ultima.styleClass }}">
+                        <p class="historico-senha-atual">Senha atual</p>
+                        <div class="senha">
+                            <span>
+                                {{ ultima.texto }}
+                            </span>
+                        </div>
+                        <div>
+                            <span class="local">
+                                {{ ultima.local }}: {{ ultima.numeroLocal }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 3">
                         <div class="senha">
                             <span>{{ senha.texto }}</span>
                         </div>
