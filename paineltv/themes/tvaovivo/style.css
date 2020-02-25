@@ -65,7 +65,7 @@
  * Senha Atual - Ultima senha chamada
  */
 #mensagem {    
-	/* text-align: center; */
+	margin-bottom: -37px;
 }
 
 #mensagem span {
@@ -174,7 +174,7 @@
 }
 
 #senha span {	
-	font-size: 30vmin;
+	font-size: 33vmin;
 }
 
 #local span {

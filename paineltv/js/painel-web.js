@@ -103,7 +103,7 @@ angular.module('app', [])
         
         // Alterar essa função para sobrescrever video por 10 seg
         $scope.chamar = function() {
-            if (PainelWeb.started && $scope.senhas.length > 0) {
+            if (PainelWeb.started && $scope.senhas.length > 0) {                
                 var senha = $scope.senhas.shift();
 
                 PainelWeb.trigger('callstart');
@@ -125,6 +125,14 @@ angular.module('app', [])
                     }
                 }
                 $scope.ultima = senha;
+
+                $('#ultima-senha-container').removeClass('d-none');
+                $('#youtube-player').addClass('d-none');
+
+                setTimeout(function() {
+                    $('#ultima-senha-container').addClass('d-none');
+                    $('#youtube-player').removeClass('d-none');
+                }, 10000)
             }
         };
 

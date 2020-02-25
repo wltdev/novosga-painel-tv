@@ -85,11 +85,6 @@ html, body {
     border-left: 65px solid transparent;
 }
 
-.hour-content {
-    float: right;
-    padding: 15px 15px 15px 30px;
-}
-
 /* cores - inativo */
 #layout.inactive {
     background: #f1f1f1;
@@ -118,7 +113,7 @@ footer {
 
 .shape {
     background: blue;
-    height: 100px;
+    height: 140px;
     position: relative;
     width: 65vh;
     color:white;
@@ -126,7 +121,7 @@ footer {
 .shape::before {
     background: blue none repeat scroll 0 0;
     content: "";
-    height: 100px;
+    height: 140px;
     position: absolute;
     left: -25px;
     transform: skew(20deg);
