@@ -101,8 +101,9 @@ angular.module('app', [])
             PainelWeb.trigger('save');
         };
         
+        // Alterar essa função para sobrescrever video por 10 seg
         $scope.chamar = function() {
-            if (PainelWeb.started && $scope.senhas.length > 0) {
+            if (PainelWeb.started && $scope.senhas.length > 0) {                
                 var senha = $scope.senhas.shift();
 
                 PainelWeb.trigger('callstart');
@@ -124,6 +125,14 @@ angular.module('app', [])
                     }
                 }
                 $scope.ultima = senha;
+
+                $('#ultima-senha-container').removeClass('d-none');
+                $('#youtube-player').addClass('d-none');
+
+                setTimeout(function() {
+                    $('#ultima-senha-container').addClass('d-none');
+                    $('#youtube-player').removeClass('d-none');
+                }, 10000)
             }
         };
 
@@ -336,7 +345,12 @@ var PainelWeb = {
         play: function(filename, immediate) {
             var audio = document.getElementById('alert');
             audio.src = 'media/alert/' + filename;
-            audio.play();
+            audio.muted = false
+            var unmuteButton = document.getElementById('unmuteButton');
+            unmuteButton.addEventListener('click', function() {
+                audio.play()
+            });
+            // audio.play()     
             $(audio).off('ended');
             if (immediate) {
                 $(audio).on('ended', function() {
@@ -350,7 +364,7 @@ var PainelWeb = {
         queue: [],
         playing: false,
                 
-        play: function(senha, params) {
+        play: function(senha, params) {            
             params = params || {};
             if (params.vocalizar) {
                 // "senha"
@@ -378,10 +392,11 @@ var PainelWeb = {
         playFile: function(filename) {
             var self = this;
             var bz = new buzz.sound(filename, {
-                formats: ["mp3"],
-                autoplay: true
+                formats: ["mp3"]                
             });
-
+            console.log(bz)
+            bz.play()
+            
             var end = function() {
                 self.processQueue();
             };

@@ -22,7 +22,9 @@ function checkTime() {
     default:
       sufix = "th";
   }
-  document.getElementById('time').innerHTML = " <span class='hour'>" + hours + ":" + minutes + "</span><br/><span class='date'>" + weekday + ', ' + day + ' de ' + month + '.';
+  document.getElementById('hour').innerHTML = hours + ":" + minutes;
+  document.getElementById('monthday').innerHTML = day + ' de ' + month;
+  document.getElementById('weekday').innerHTML = weekday;
 }
 
 setInterval(checkTime(), 1000);

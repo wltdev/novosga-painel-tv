@@ -77,6 +77,14 @@ html, body {
     padding: 20px 0;
 }
 
+.hour-container {
+    height: 118px;
+    /* background-color: blue; */
+    width: 75vh;
+    border-top: 100px solid blue;
+    border-left: 65px solid transparent;
+}
+
 /* cores - inativo */
 #layout.inactive {
     background: #f1f1f1;
@@ -96,4 +104,26 @@ html, body {
 
 .ng-scope {
     height: 100%;
+}
+
+footer {
+    border-top: blue 3px solid;
+    height: 200px;
+}
+
+.shape {
+    background: blue;
+    height: 140px;
+    position: relative;
+    width: 65vh;
+    color:white;
+}
+.shape::before {
+    background: blue none repeat scroll 0 0;
+    content: "";
+    height: 140px;
+    position: absolute;
+    left: -25px;
+    transform: skew(20deg);
+    width: 50px;
 }

@@ -14,7 +14,10 @@
     <body>
         <div class="container">
             <form id="login-form" action="login" method="post" class="form-signin">
-                <h2 id="logo" class="form-signin-heading">Novo SGA</h2>
+                <div style="text-align: center;">
+                    <img src="/logo.png" width="250" class="img-fluid" />
+                </div>
+                
                 {% if flash['error'] %}
                     <div class="alert alert-danger">
                         {{ flash['error'] }}

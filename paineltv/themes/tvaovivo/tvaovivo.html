@@ -1,6 +1,6 @@
 <div>
 	<div class="row">
-		<div class="col-md-7" style="background-color: black;">		
+		<div class="col-md-7" >		
 			<div class="row">
 				<div class="col">				
 					<iframe 
@@ -15,13 +15,29 @@
 					</iframe>
 				</div>
 			</div>
-			<div class="row">
+
+			 <div class="row">
+				<div id="historico" class="col">
+					<div class="senhas">
+						<div class="col-md-6 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
+							<div class="senha">
+								<span>{{ senha.texto }}</span>
+							</div>
+							<div>
+								<span class="local">{{ senha.local }}: {{ senha.numeroLocal }}</span>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div> 
+			
+			<!-- <div class="row">
 				<div id="hora" class="col">
 					<div id="relogio-container">
 						<iframe id="relogio" src="themes/tvaovivo/relogio.html" frameborder="0"></iframe>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<!-- <div class="row">
 				<div class="col">
 					<div class="noticias">
@@ -52,10 +68,18 @@
 				</div>					
 			</div>
 
-			<h2 style="text-align: center;">Senha anteriores</h2>
-			<hr />
+			<!-- <h2 style="text-align: center;">Senha anteriores</h2>
+			<hr /> -->
 
 			<div class="row">
+				<div id="hora" class="col">
+					<div id="relogio-container">
+						<iframe id="relogio" src="themes/tvaovivo/relogio.html" frameborder="0"></iframe>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="row">
 				<div id="historico" class="col">
 					<div class="senhas">
 						<div class="col-md-6 senha-chamada {{ senha.styleClass }}" ng-repeat="senha in historico | limitTo: 4">
@@ -68,7 +92,7 @@
 						</div>	
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 
 	</div>
