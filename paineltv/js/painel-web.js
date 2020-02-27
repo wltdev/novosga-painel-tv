@@ -345,7 +345,12 @@ var PainelWeb = {
         play: function(filename, immediate) {
             var audio = document.getElementById('alert');
             audio.src = 'media/alert/' + filename;
-            audio.play();
+            audio.muted = false
+            var unmuteButton = document.getElementById('unmuteButton');
+            unmuteButton.addEventListener('click', function() {
+                audio.play()
+            });
+            // audio.play()     
             $(audio).off('ended');
             if (immediate) {
                 $(audio).on('ended', function() {
@@ -359,7 +364,7 @@ var PainelWeb = {
         queue: [],
         playing: false,
                 
-        play: function(senha, params) {
+        play: function(senha, params) {            
             params = params || {};
             if (params.vocalizar) {
                 // "senha"
@@ -387,10 +392,11 @@ var PainelWeb = {
         playFile: function(filename) {
             var self = this;
             var bz = new buzz.sound(filename, {
-                formats: ["mp3"],
-                autoplay: true
+                formats: ["mp3"]                
             });
-
+            console.log(bz)
+            bz.play()
+            
             var end = function() {
                 self.processQueue();
             };
